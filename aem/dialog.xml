@@ -1,0 +1,206 @@
+<!-- OPTIONAL PROPERTIES -->
+<!-- general -->
+required="{Boolean}true"
+cq:showOnCreate="{Boolean}true"
+<!-- tabs -->
+maximized="true"
+margin="true"
+<!-- richtext -->
+useFixedInlineToolbar="{Boolean}true"
+removeSingleParagraphContainer="{Boolean}true"
+<!-- END OPTIONA PROPERTIES -->
+
+<textField
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+    fieldLabel="Text Fiels"
+    name="./textField">
+</textField>
+
+<select
+        jcr:primaryType="nt:unstructured"
+        fieldLabel="Select"
+        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+        name="./select">
+    <items jcr:primaryType="nt:unstructured">
+        <opt1
+                jcr:primaryType="nt:unstructured"
+                text="Opt 1"
+                selected="{Boolean}true"
+                value="opt1"/>
+        <opt2
+                jcr:primaryType="nt:unstructured"
+                text="Opt 2"
+                value="opt2"/>
+        <opt3
+                jcr:primaryType="nt:unstructured"
+                text="Opt 3"
+                value="opt3"/>
+    </items>
+</select>
+
+<hidden
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/form/hidden"
+        name="./hidden"
+        fieldLabel="Hidden"
+        fieldDescription="Hidden Description"
+        checked="{Boolean}true"
+        uncheckedValue="{Boolean}false"
+        value="{Boolean}false">
+</hidden>
+
+<switch
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+        name="./switch"
+        fieldLabel="Switch"
+        fieldDescription="Switch Description"
+        checked="{Boolean}true"
+        uncheckedValue="{Boolean}false">
+</switch>
+
+<column
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+    </items>
+</column>
+
+<fieldSet
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Field Set"
+        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+    <items jcr:primaryType="nt:unstructured">
+    </items>
+</fieldSet>
+
+<fixedColumns
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Fixed Columns"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <items jcr:primaryType="nt:unstructured">
+    </items>
+</fixedColumns>
+
+<include
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/include"
+        path="/apps/{path}"/>
+
+<tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/tabs">
+    <items jcr:primaryType="nt:unstructured">
+    </items>
+</tabs>
+
+<well
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/well">
+    <items jcr:primaryType="nt:unstructured">
+    </items>
+</well>
+
+<pathField
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+        rootPath="/content/dam/{path}"
+        fieldLabel="Path Field"
+        name="./pathField"/>
+
+<alert
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/alert"
+        variant="warning"
+        size="S"
+        jcr:title="Alert"
+        text="Alert Text"/>
+
+<numberField
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+        name="./numberField"
+        fieldLabel="Number Field"
+        fieldDescription="Number Field Description"
+        emptyText="34"
+        min="0"/>
+
+<checkbox
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+        name="./checkbox"
+        text="Checkbox"
+        fieldDescription="Checkbox Description"
+        checked="{Boolean}false"
+        uncheckedValue="{Boolean}true"
+        value="{Boolean}false"/>
+
+<image
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/form/fileupload"
+        allowUpload="{Boolean}false"
+        autoStart="{Boolean}false"
+        class="cq-droptarget"
+        fieldLabel="Image"
+        fileNameParameter="./imagePar"
+        fileReferenceParameter="./imageRef"
+        mimeTypes="image"
+        multiple="{Boolean}false"
+        name="./image"
+        title="Image Title"
+        uploadUrl="${suffix.path}"
+        useHTML5="{Boolean}true"/>
+
+<richText
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+        fieldLabel="Rich Text"
+        required="{Boolean}true"
+        name="./richText">
+    <!-- Optional rte plugins -->
+    <rtePlugins jcr:primaryType="nt:unstructured">
+        <format
+                jcr:primaryType="nt:unstructured"
+                features="*"/>
+        <justify
+                jcr:primaryType="nt:unstructured"
+                features="*"/>
+        <lists
+                jcr:primaryType="nt:unstructured"
+                features="*"/>
+        <paraformat
+                jcr:primaryType="nt:unstructured"
+                features="*"/>
+    </rtePlugins>
+</richText>
+
+<!-- SHOW/HIDE -->
+<selection
+        granite:class="cq-dialog-dropdown-showhide"
+        jcr:primaryType="nt:unstructured"
+        fieldLabel="Selection"
+        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+        name="./selection">
+    <granite:data
+            jcr:primaryType="nt:unstructured"
+            cq-dialog-dropdown-showhide-target=".container-margin"/>
+    <items jcr:primaryType="nt:unstructured">
+        <op1
+                jcr:primaryType="nt:unstructured"
+                text="Op 1"
+                selected="{Boolean}true"
+                value="{Boolean}true"/>
+        <op2
+                jcr:primaryType="nt:unstructured"
+                text="Op 2"
+                value="{Boolean}false"/>
+    </items>
+</selection>
+<containerHide jcr:primaryType="nt:unstructured"
+        granite:class="coral-Form-fieldwrapper hide container-margin"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+    <granite:data
+            jcr:primaryType="nt:unstructured"
+            showhidetargetvalue="{Boolean}false"/>
+    <items jcr:primaryType="nt:unstructured">
+    </items>
+</containerHide>

@@ -1,0 +1,21 @@
+<!-- GENERAL -->
+${inheritedPageProperties}
+${currentPage.properties}
+${currentPage}
+${properties}
+${wcmmode}
+
+<!-- TEMPLATE -->
+<template data-sly-template.template="${ @ parameters}">
+</template>
+
+<sly data-sly-use.tmpl="/apps/{path}"
+     data-sly-call="${tmpl.template @ parameters}"></sly>
+<!-- END TEMPLATE -->
+
+<!-- LIST -->
+<sly data-sly-list="${obj}">
+    <span>NAME: ${item.name}</span>
+    <span>COUNT: ${itemList.count}</span>
+</sly>
+<!-- END LIST -->

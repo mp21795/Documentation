@@ -1,0 +1,9 @@
+<key1
+            jcr:mixinTypes="[sling:Message]"
+            jcr:primaryType="nt:folder"
+            sling:key="key1"
+            sling:message="Key 1"/>
+<key2
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="key2"
+            sling:message="Key 2"/>
